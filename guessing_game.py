@@ -5,7 +5,7 @@ import random
 import helper_functions
 
 
-def game():
+def main():
     number = random.randint(1, 10)
     counter = 0
     guess = None
@@ -52,8 +52,14 @@ def game():
 
     play_again = helper_functions.restart()
 
-    if play_again == "YES":
-        game()
+    while True:
+        if play_again == "YES":
+            main()
+        elif play_again == "TRY_AGAIN":
+            play_again = helper_functions.restart()
+        else:
+            break
 
 
-game()
+if __name__ == "__main__":
+    main()

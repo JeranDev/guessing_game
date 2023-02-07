@@ -49,8 +49,7 @@ def restart():
 
     if choice != "YES" and choice != "NO":
         print("YES or NO dummy")
-        time.sleep(2)
-        return
+        return "TRY_AGAIN"
 
     elif choice == "YES":
         return "YES"
